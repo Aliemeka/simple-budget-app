@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Todo app for organizing my life" />
+    <title>Budget Planner App</title>
+  </head>
+
+  <body class="dark">
+    <header>
+      <h1>Budget Planner App</h1>
+    </header>
+    <main>
+      <header class="main-header">
+        <form id="budget-form">
+          <div>
+            <label for="budget">How much do you have?</label>
+          </div>
+          <input
+            id="budget-input"
+            name="budget"
+            type="number"
+            class="budget-input"
+          />
+          <button type="submit" class="budget-button">Submit Budget</button>
+        </form>
+        <div id="budget-display" class="budget-display">
+          <h1>Your Budget: N<span id="budget-amount">20000</span></h1>
+        </div>
+      </header>
+      <section id="items-section" class="items-container">
+        <form class="items-form" id="items-form">
+          <div>
+            <label class="item-label" for="item"
+              >What do you want to buy?</label
+            >
+          </div>
+          <input
+            name="itemName"
+            id="item-input"
+            class="item-input"
+            type="text"
+          />
+          <div>
+            <label class="item-label" for="item">How much is it</label>
+          </div>
+          <input
+            name="amount"
+            id="amount-input"
+            class="item-input"
+            type="number"
+            inputmode="decimal"
+          />
+          <button type="submit" class="item-button" type="submit">
+            Add item
+          </button>
+        </form>
+        <div style="display: none" class="nothing" id="nothing">
+          <p>No items yet</p>
+        </div>
+        <ul class="items-list" id="items-list">
+          <!--Empty for now-->
+        </ul>
+        <div class="costing">
+          <div>
+            <h3>Total cost:</h3>
+            <p id="total">--</p>
+          </div>
+          <div>
+            <h3>Amount left</h3>
+            <p id="amount-left">--</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button class="dark-mode-button" id="dark-mode">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-moon"
+        id="moon-icon"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-sun"
+        id="sun-icon"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+    <footer>
+      <p>
+        Made by
+        <a href="https://github.com/Aliemeka" target="_blank">Aliemeka</a>
+      </p>
+    </footer>
+    <!-- <script>
+      document.documentElement.setAttribute("data-theme", "dark");
+    </script> -->
+    <script src="app.js"></script>
+  </body>
+</html>
